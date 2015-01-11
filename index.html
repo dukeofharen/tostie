@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Tostie jQuery toast messages</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="src/jquery.tostie.min.js"></script>
+	<link rel="stylesheet" href="src/jquery.tostie.css" type="text/css" />
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#simple-notice').click(function(){
+			$().tostie({type:"notice", message:"This is a notice."});
+			return false;
+		});
+		$('#simple-success').click(function(){
+			$().tostie({type:"success", message:"This is a success notice."});
+			return false;
+		});
+		$('#simple-warning').click(function(){
+			$().tostie({type:"warning", message:"This is a warning."});
+			return false;
+		});
+		$('#simple-error').click(function(){
+			$().tostie({type:"error", message:"This is an error."});
+			return false;
+		});
+		$('#slow-notice').click(function(){
+			$().tostie({type:"notice", message:"This is a slowly appearing and fading toast message.", inOutDuration:3000, inOutType:"fade"});
+			return false;
+		});
+	});
+	</script>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Tostie</h1>
+        <p>A very simple, slick, responsive and customizable toast message plugin for jQuery.</p>
+
+        <p class="view"><a href="https://github.com/dukeofharen/tostie">View the Project on GitHub <small>dukeofharen/tostie</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/dukeofharen/tostie/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/dukeofharen/tostie/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/dukeofharen/tostie">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tostie</h3>
+
+<p>
+	<img src="img/screen.jpg" alt="jQuery toast messages" />
+</p>
+
+<p>Tostie is a very simple way to show nice toast notifications in your website. It works great for both normal and responsive websites. Some of the features:</p>
+<p>
+	<ul>
+		<li>4 types of notifications: success, notice, warning and error</li>
+		<li>Easy API through jQuery</li>
+		<li>Fully responsive</li>
+		<li>Toast messages stay at top of the view, so you see them even if you're scrolling</li>
+		<li>Click on the toast message to let it disappear</li>
+	</ul>
+</p>
+
+<h3>Demo</h3>
+
+<strong>Simple</strong>
+<p>
+	<a href="#" id="simple-notice">Notice</a><br />
+	<a href="#" id="simple-success">Success</a><br />
+	<a href="#" id="simple-warning">Warning</a><br />
+	<a href="#" id="simple-error">Error</a>
+</p>
+
+<pre><code>
+$().tostie({type:"notice", message:"This is a notice."});
+</code></pre>
+
+<p>
+	<a href="#" id="slow-notice">Slow and fading toast message</a>
+</p>
+
+<pre><code>
+$().tostie({type:"notice", message:"This is a slowly appearing and fading toast message.", inOutDuration:3000, inOutType:"fade"});
+</code></pre>
+
+<h3>API</h3>
+
+<p>
+The properties below are available when you call tostie, with their default values listed.
+</p>
+
+<pre><code>
+message: "",			// The actual message which should be shown
+type: "notice",			// The type of the toast message. Can be "success", "notice", "warning" or "error"
+toastDuration: 3000,		// The number of milliseconds the toast message should be shown
+inOutDuration: 300,		// The number of milliseconds in which the toast message should be opened and removed
+inOutType: "slide",		// How the toast message should be shown. Can be "slide" or "fade"
+beforeClose: function(){},	// The function which is executed just before closing
+afterClose: function(){}	// The function which is executed just after closing
+</code></pre>
+
+<h3>Installation</h3>
+<p>
+	Installing the addon is nothing more than including jQuery and jquery.tostie.css and jquery.tostie.js (or jquery.tostie.min.js).
+</p>
+<p>
+	Have fun with tostie! Project by <a href="http://duco.cc">Duco Winterwerp</a>. The plugin is licensed under the <a href="http://opensource.org/licenses/MIT">MIT License</a>.
+</p>
+
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/dukeofharen">dukeofharen</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
